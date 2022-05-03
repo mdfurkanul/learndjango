@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Home</h1>
+    {{name | capfirst}}
+    <p>the ages</p>
+
+    <ul>
+        {% for age in ages %}
+            {% if age != 0 %} 
+                <li>{{forloop.counter}} - {{age}}</li> 
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
